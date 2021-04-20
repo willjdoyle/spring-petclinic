@@ -22,7 +22,7 @@ components:
       - name: m2
         containerPath: /home/jboss/.m2
     alias: maven
-    image: 'registry.redhat.io/codeready-workspaces/plugin-java11-openj9-rhel8@sha256:42ab187404784c4d09fd477c249e8387867ae168119fe1ab028ebe1c137bc180'
+    image: 'registry.redhat.io/codeready-workspaces/plugin-java11-openj9-rhel8:2.7'
     env:
       - value: '-XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom -Duser.home=/home/jboss'
         name: JAVA_OPTS
@@ -35,7 +35,7 @@ components:
   - type: dockerimage
     alias: mysql
     image: >-
-      registry.redhat.io/rhel8/mysql-80@sha256:55c08482a20b653dab4d78fad77b5a459e04258135e19fb14efbd1072c786fd3
+      registry.redhat.io/rhel8/mysql-80:1
     memoryLimit: 512Mi
     env:
       - name: DATABASE_SERVICE_NAME
