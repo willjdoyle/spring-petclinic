@@ -22,7 +22,7 @@ components:
       - name: m2
         containerPath: /home/jboss/.m2
     alias: maven
-    image: 'registry.redhat.io/codeready-workspaces/plugin-java11-rhel8@sha256:641e223f5efbc32bab3461aa000e3a50a5dcca063331322158d1c959129ffd99'
+    image: 'registry.redhat.io/codeready-workspaces/plugin-java11-openj9-rhel8@sha256:42ab187404784c4d09fd477c249e8387867ae168119fe1ab028ebe1c137bc180'
     env:
       - value: '-XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom -Duser.home=/home/jboss'
         name: JAVA_OPTS
