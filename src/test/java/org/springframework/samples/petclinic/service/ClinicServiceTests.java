@@ -36,6 +36,7 @@ import org.springframework.samples.petclinic.visit.Visit;
 import org.springframework.samples.petclinic.visit.VisitRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.test.context.ActiveProfiles;
 
 /**
  * Integration test of the Service and the Repository layer.
@@ -67,6 +68,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Dave Syer
  */
 @DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
+@ActiveProfiles("default")
 class ClinicServiceTests {
 
 	@Autowired
