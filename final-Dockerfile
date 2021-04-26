@@ -1,6 +1,5 @@
 ARG PETCLINIC_S2I_IMAGE
 FROM "${PETCLINIC_S2I_IMAGE}" as intermediate
-COPY ${JAR_FILE} application.jar
 RUN java -Djarmode=layertools -jar /deployments/*.jar extract
 
 FROM registry.redhat.io/openj9/openj9-11-rhel8:1.2
