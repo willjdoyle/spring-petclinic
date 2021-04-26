@@ -2,7 +2,7 @@ ARG PETCLINIC_S2I_IMAGE
 FROM "${PETCLINIC_S2I_IMAGE}" as intermediate
 RUN java -Djarmode=layertools -jar /deployments/*.jar extract
 
-FROM registry.access.redhat.com/openj9/openj9-11-rhel8:1.2
+FROM adoptopenjdk:openj9 
 COPY --from=intermediate snapshot-dependencies .
 COPY --from=intermediate dependencies .
 COPY --from=intermediate spring-boot-loader .
