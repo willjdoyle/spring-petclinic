@@ -193,6 +193,9 @@
               <goal>build-info</goal>
             </goals>
             <configuration>
+              <layers>
+                  <enabled>true</enabled>
+              </layers>
               <additionalProperties>
                 <encoding.source>${project.build.sourceEncoding}</encoding.source>
                 <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
