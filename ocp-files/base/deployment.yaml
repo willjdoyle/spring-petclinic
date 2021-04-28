@@ -6,13 +6,13 @@ spec:
   template:
     spec:
       containers:
-      - image: spring-petclinic-minimal 
+      - image: spring-petclinic 
         imagePullPolicy: Always
-        name: spring-petclinic-minimal
+        name: spring-petclinic
       resources:
         requests:
           memory: 100Mi
-          cpu: 50m
+          cpu: 100m
         limits:
           memory: 100Mi
           cpu: 100m
