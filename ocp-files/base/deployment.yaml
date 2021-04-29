@@ -9,10 +9,10 @@ spec:
       - image: spring-petclinic-git 
         imagePullPolicy: Always
         name: spring-petclinic-git
-      resources:
-        requests:
-          memory: 100Mi
-          cpu: 100m
-        limits:
-          memory: 100Mi
-          cpu: 100m
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+          limits:
+            memory: 100Mi
+            cpu: 100m
