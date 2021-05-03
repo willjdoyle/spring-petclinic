@@ -1,7 +1,7 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: spring-petclinic-git
+  name: spring-petclinic
 spec:
   port:
     targetPort: 8080-8080
@@ -9,4 +9,4 @@ spec:
     termination: edge
   to:
     kind: Service
-    name: spring-petclinic-git
+    name: spring-petclinic

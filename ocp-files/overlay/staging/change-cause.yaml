@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   annotations: 
     kubernetes.io/change-cause: "OpenShift Pipelines published new staging release"
-  name: spring-petclinic-git
+  name: spring-petclinic

@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-petclinic-git
+  name: spring-petclinic
 spec:
   template:
     spec:
       containers:
-      - image: spring-petclinic-git 
+      - image: spring-petclinic 
         imagePullPolicy: Always
-        name: spring-petclinic-git
+        name: spring-petclinic
         resources:
           requests:
             memory: 600Mi
