@@ -5,5 +5,8 @@ bases:
 commonLabels:
   env: dev
 nameSuffix: -dev
+configMapGenerator:
+- name: spring-petclinic
+  env: ./dev-environment
 patches:
 - change-cause.yaml
