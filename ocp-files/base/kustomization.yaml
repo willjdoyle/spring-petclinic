@@ -10,8 +10,7 @@ resources:
 
 configMapGenerator:
 - name: spring-petclinic
-  envs:
-  - ./environment 
+  env: ./environment 
 
 crds:
 - openshift-route.json
