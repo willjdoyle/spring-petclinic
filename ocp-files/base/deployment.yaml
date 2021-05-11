@@ -9,6 +9,9 @@ spec:
       - image: spring-petclinic 
         imagePullPolicy: Always
         name: spring-petclinic
+        envFrom:
+        - configMapRef:
+            name: spring-petclinic
         resources:
           requests:
             memory: 600Mi
